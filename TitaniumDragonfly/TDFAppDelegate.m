@@ -7,6 +7,7 @@
 //
 
 #import "TDFAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation TDFAppDelegate
 
@@ -16,10 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [Parse setApplicationId:@"W42paYXUFqCWWBqto05S2DhjzgWYgvFdS8Ll9SjZ"
+                  clientKey:@"30ZVJvbQfojMbvHC54KWqvGoKz8mMG3EQSNGJDuR"];
     return YES;
 }
 
