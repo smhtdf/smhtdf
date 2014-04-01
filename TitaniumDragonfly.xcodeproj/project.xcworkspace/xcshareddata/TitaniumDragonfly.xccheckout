@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0C367FAB-3D18-4A4D-9448-031D280B7F9B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TitaniumDragonfly</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>47C2AE51-28B8-492F-958D-42FFAA0F3639</key>
+		<string>https://github.com/smhtdf/smhtdf.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TitaniumDragonfly.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>47C2AE51-28B8-492F-958D-42FFAA0F3639</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/smhtdf/smhtdf.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>47C2AE51-28B8-492F-958D-42FFAA0F3639</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47C2AE51-28B8-492F-958D-42FFAA0F3639</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TitaniumDragonfly</string>
+		</dict>
+	</array>
+</dict>
+</plist>
