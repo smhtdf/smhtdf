@@ -1,19 +1,21 @@
 //
-//  TDFInventoryViewController.m
+//  TDFCreateItemViewController.m
 //  TitaniumDragonfly
 //
 //  Created by Current User on 02/04/2014.
 //
 //
 
-#import "TDFInventoryViewController.h"
 #import "TDFCreateItemViewController.h"
+#import <Parse/Parse.h>
 
-@interface TDFInventoryViewController ()
+@interface TDFCreateItemViewController ()
 
 @end
 
-@implementation TDFInventoryViewController
+@implementation TDFCreateItemViewController
+
+@synthesize createItemCompletionBlock;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +38,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -43,28 +46,26 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"ShowCreateItemViewSegue"]) {
-        TDFCreateItemViewController *createItemViewController = segue.destinationViewController;
-        [createItemViewController setCreateItemCompletionBlock:^{
-            [self loadObjects];
-        }];
-    }
+}
+*/
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return [textField resignFirstResponder];
 }
 
-#pragma mark - Parse API
+#pragma mark - Button handlers
 
-- (PFQuery *)queryForTable {
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+- (IBAction)inventoryItemCreateItButtonTouched:(id)sender
+{
+    PFObject *inventoryItem = [PFObject objectWithClassName:@"InventoryItem"];
+    inventoryItem[@"name"] = self.inventoryItemNameTextField.text;
+    [inventoryItem save];
     
-    // If no objects are loaded in memory, we look to the cache first to fill the table
-    // and then subsequently do a query against the network.
-    if (self.objects.count == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    }
-    
-    [query orderByDescending:@"createdAt"];
-    
-    return query;
+    createItemCompletionBlock();
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

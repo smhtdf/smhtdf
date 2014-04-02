@@ -36,6 +36,7 @@
 		A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */; };
 		A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */; };
 		A4BBF8F318EC122500247E4C /* TDFInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F218EC122500247E4C /* TDFInventoryViewController.m */; };
+		A4BBF8F618EC16B500247E4C /* TDFCreateItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F518EC16B500247E4C /* TDFCreateItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A4BBF8F118EC122500247E4C /* TDFInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFInventoryViewController.h; sourceTree = "<group>"; };
 		A4BBF8F218EC122500247E4C /* TDFInventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFInventoryViewController.m; sourceTree = "<group>"; };
+		A4BBF8F418EC16B500247E4C /* TDFCreateItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCreateItemViewController.h; sourceTree = "<group>"; };
+		A4BBF8F518EC16B500247E4C /* TDFCreateItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCreateItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */,
 				A4BBF8F118EC122500247E4C /* TDFInventoryViewController.h */,
 				A4BBF8F218EC122500247E4C /* TDFInventoryViewController.m */,
+				A4BBF8F418EC16B500247E4C /* TDFCreateItemViewController.h */,
+				A4BBF8F518EC16B500247E4C /* TDFCreateItemViewController.m */,
 				A418EFDD18EB576400F8CD4F /* Images.xcassets */,
 				A418EFDA18EB576400F8CD4F /* TitaniumDragonfly.xcdatamodeld */,
 				A418EFCF18EB576400F8CD4F /* Supporting Files */,
@@ -310,6 +315,7 @@
 				A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */,
 				A418EFDC18EB576400F8CD4F /* TitaniumDragonfly.xcdatamodeld in Sources */,
 				A418EFD518EB576400F8CD4F /* main.m in Sources */,
+				A4BBF8F618EC16B500247E4C /* TDFCreateItemViewController.m in Sources */,
 				A418EFD918EB576400F8CD4F /* TDFAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

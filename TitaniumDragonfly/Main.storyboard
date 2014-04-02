@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="59a-8k-ajH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EJp-ZP-9Ug">
                             <connections>
-                                <segue destination="aOZ-eC-Tt4" kind="push" id="nMF-60-x3h"/>
+                                <segue destination="aOZ-eC-Tt4" kind="push" identifier="ShowCreateItemViewSegue" id="nMF-60-x3h"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1155" y="-105"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Item View Controller-->
         <scene sceneID="Qct-fL-ChP">
             <objects>
-                <viewController id="aOZ-eC-Tt4" sceneMemberID="viewController">
+                <viewController id="aOZ-eC-Tt4" customClass="TDFCreateItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZc-oz-O2X"/>
                         <viewControllerLayoutGuide type="bottom" id="t4E-8J-p7J"/>
@@ -84,9 +84,40 @@
                     <view key="view" contentMode="scaleToFill" id="z45-3e-THh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create inventory item:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2T-xj-nQF">
+                                <rect key="frame" x="20" y="81" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-Iy-fuu">
+                                <rect key="frame" x="20" y="128" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aOZ-eC-Tt4" id="O0P-Um-phE"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mce-KS-aQd">
+                                <rect key="frame" x="129" y="177" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create it!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inventoryItemCreateItButtonTouched:" destination="aOZ-eC-Tt4" eventType="touchUpInside" id="KgR-5t-ZYv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lbg-n3-pmf"/>
+                    <connections>
+                        <outlet property="inventoryItemNameTextField" destination="pCO-Iy-fuu" id="nDr-7Z-k3y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfX-rC-Dzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
