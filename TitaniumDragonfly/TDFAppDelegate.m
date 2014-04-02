@@ -24,9 +24,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Connect this app with Parse app named "Titanium Dragonfly"
     [Parse setApplicationId:@"W42paYXUFqCWWBqto05S2DhjzgWYgvFdS8Ll9SjZ"
                   clientKey:@"30ZVJvbQfojMbvHC54KWqvGoKz8mMG3EQSNGJDuR"];
     
+    // Starting watching for significant location changes
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
     [self.locationManager startMonitoringSignificantLocationChanges];
