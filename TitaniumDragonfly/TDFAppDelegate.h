@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString* const kTDFLocationChangeNotification = @"kTDFLocationChangeNotification";
+
 @interface TDFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

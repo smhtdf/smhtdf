@@ -9,6 +9,13 @@
 #import "TDFAppDelegate.h"
 #import <Parse/Parse.h>
 
+@interface TDFAppDelegate () <CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
+@end
+
 @implementation TDFAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -19,6 +26,11 @@
 {
     [Parse setApplicationId:@"W42paYXUFqCWWBqto05S2DhjzgWYgvFdS8Ll9SjZ"
                   clientKey:@"30ZVJvbQfojMbvHC54KWqvGoKz8mMG3EQSNGJDuR"];
+    
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.delegate = self;
+    [self.locationManager startMonitoringSignificantLocationChanges];
+    
     return YES;
 }
 
@@ -143,6 +155,13 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Core Location handlers
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTDFLocationChangeNotification object:nil userInfo:[NSDictionary dictionaryWithObject:[locations lastObject] forKey:@"location"]];
 }
 
 @end
