@@ -73,6 +73,18 @@
 
 #pragma mark - Navigation
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"ShowDropItemViewSegue"]) {
+        if (!self.geoPoint) {
+#warning TODO: get current location immediately
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
