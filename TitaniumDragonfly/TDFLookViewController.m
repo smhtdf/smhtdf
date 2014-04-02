@@ -7,6 +7,7 @@
 //
 
 #import "TDFLookViewController.h"
+#import "TDFAppDelegate.h"
 
 @interface TDFLookViewController ()
 
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +47,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Core Location handlers
+
+- (void)locationDidChange:(NSNotification *)note
+{
+    // Extract location key
+    CLLocation *location = note.userInfo[@"location"];
+
+    // Set 2km tall region span (NOTE: 111km ~ 1 degree of latitude)
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.018, 0.000);
+    
+    // create region, consisting of span and location
+    MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, span);
+    
+    // move the map to our location
+    [self.lookMap setRegion:region animated:YES];
+}
 
 @end
