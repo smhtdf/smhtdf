@@ -33,6 +33,8 @@
 		A41AC07118EB62C7008B52B2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07018EB62C7008B52B2 /* StoreKit.framework */; };
 		A41AC07318EB62D5008B52B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */; };
 		A41AC07518EB6371008B52B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AC07418EB6371008B52B2 /* Main.storyboard */; };
+		A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */; };
+		A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,9 @@
 		A41AC07018EB62C7008B52B2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A41AC07418EB6371008B52B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A4BBF8EC18EBDED500247E4C /* TDFLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLookViewController.h; sourceTree = "<group>"; };
+		A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLookViewController.m; sourceTree = "<group>"; };
+		A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */,
 				A41AC07318EB62D5008B52B2 /* SystemConfiguration.framework in Frameworks */,
 				A41AC07118EB62C7008B52B2 /* StoreKit.framework in Frameworks */,
 				A41AC06F18EB62BA008B52B2 /* Security.framework in Frameworks */,
@@ -135,6 +141,7 @@
 		A418EFC518EB576400F8CD4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */,
 				A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */,
 				A41AC07018EB62C7008B52B2 /* StoreKit.framework */,
 				A41AC06E18EB62BA008B52B2 /* Security.framework */,
@@ -160,6 +167,8 @@
 				A418EFD718EB576400F8CD4F /* TDFAppDelegate.h */,
 				A418EFD818EB576400F8CD4F /* TDFAppDelegate.m */,
 				A41AC07418EB6371008B52B2 /* Main.storyboard */,
+				A4BBF8EC18EBDED500247E4C /* TDFLookViewController.h */,
+				A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */,
 				A418EFDD18EB576400F8CD4F /* Images.xcassets */,
 				A418EFDA18EB576400F8CD4F /* TitaniumDragonfly.xcdatamodeld */,
 				A418EFCF18EB576400F8CD4F /* Supporting Files */,
@@ -292,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */,
 				A418EFDC18EB576400F8CD4F /* TitaniumDragonfly.xcdatamodeld in Sources */,
 				A418EFD518EB576400F8CD4F /* main.m in Sources */,
 				A418EFD918EB576400F8CD4F /* TDFAppDelegate.m in Sources */,
