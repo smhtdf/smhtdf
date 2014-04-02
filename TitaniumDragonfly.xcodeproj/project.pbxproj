@@ -39,6 +39,7 @@
 		A4BBF8F618EC16B500247E4C /* TDFCreateItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F518EC16B500247E4C /* TDFCreateItemViewController.m */; };
 		A4BBF8F918EC1F9A00247E4C /* TDFDropItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F818EC1F9A00247E4C /* TDFDropItemViewController.m */; };
 		A4BBF8FC18EC29BF00247E4C /* TDFCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8FB18EC29BF00247E4C /* TDFCollectViewController.m */; };
+		A4BFECBE18EC63480055F871 /* TDFCollectItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BFECBD18EC63480055F871 /* TDFCollectItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		A4BBF8F818EC1F9A00247E4C /* TDFDropItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFDropItemViewController.m; sourceTree = "<group>"; };
 		A4BBF8FA18EC29BF00247E4C /* TDFCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCollectViewController.h; sourceTree = "<group>"; };
 		A4BBF8FB18EC29BF00247E4C /* TDFCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectViewController.m; sourceTree = "<group>"; };
+		A4BFECBC18EC63480055F871 /* TDFCollectItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCollectItemViewController.h; sourceTree = "<group>"; };
+		A4BFECBD18EC63480055F871 /* TDFCollectItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 				A4BBF8F818EC1F9A00247E4C /* TDFDropItemViewController.m */,
 				A4BBF8FA18EC29BF00247E4C /* TDFCollectViewController.h */,
 				A4BBF8FB18EC29BF00247E4C /* TDFCollectViewController.m */,
+				A4BFECBC18EC63480055F871 /* TDFCollectItemViewController.h */,
+				A4BFECBD18EC63480055F871 /* TDFCollectItemViewController.m */,
 				A418EFDD18EB576400F8CD4F /* Images.xcassets */,
 				A418EFDA18EB576400F8CD4F /* TitaniumDragonfly.xcdatamodeld */,
 				A418EFCF18EB576400F8CD4F /* Supporting Files */,
@@ -329,6 +334,7 @@
 				A418EFD518EB576400F8CD4F /* main.m in Sources */,
 				A4BBF8F618EC16B500247E4C /* TDFCreateItemViewController.m in Sources */,
 				A418EFD918EB576400F8CD4F /* TDFAppDelegate.m in Sources */,
+				A4BFECBE18EC63480055F871 /* TDFCollectItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

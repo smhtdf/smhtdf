@@ -10,6 +10,7 @@
 
 static NSString* const kTDFLocationChangeNotification = @"kTDFLocationChangeNotification";
 static NSString* const kTDFWorldChangeNotification = @"kTDFWorldChangeNotification";
+static NSString* const kTDFInventoryChangeNotification = @"kTDFInventoryChangeNotification";
 
 @interface TDFAppDelegate : UIResponder <UIApplicationDelegate>
 

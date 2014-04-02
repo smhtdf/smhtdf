@@ -8,12 +8,14 @@
 
 #import "TDFCollectViewController.h"
 #import "TDFAppDelegate.h"
+#import "TDFCollectItemViewController.h"
 
 @interface TDFCollectViewController ()
 
 @property (strong, nonatomic) PFGeoPoint *geoPoint;
 
 - (void)locationDidChange:(NSNotification *)note;
+- (void)worldDidChange:(NSNotification *)note;
 
 @end
 
@@ -33,6 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(worldDidChange:) name:kTDFWorldChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,7 +44,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+#pragma mark - Table View DataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *identifier = @"TDFCollectTableViewCell";
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = object[@"name"];
+    
+    return cell;
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -49,8 +64,18 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShowCollectItemViewSegue"]) {
+        TDFCollectItemViewController *collectItemViewController = segue.destinationViewController;
+        
+        PFTableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        collectItemViewController.itemObject = [self objectAtIndexPath:indexPath];
+        [collectItemViewController setCollectItemCompletionBlock:^{
+            [self loadObjects];
+            NSLog(@"objects reloaded\n");
+        }];
+    }
 }
-*/
 
 #pragma mark - Parse API
 
@@ -70,11 +95,16 @@
     return query;
 }
 
-#pragma mark - Core Location handlers
+#pragma mark - Change Notification handlers
 
 - (void)locationDidChange:(NSNotification *)note
 {
     self.geoPoint = [PFGeoPoint geoPointWithLocation:note.userInfo[@"location"]];
+    [self loadObjects];
+}
+
+- (void)worldDidChange:(NSNotification *)note
+{
     [self loadObjects];
 }
 
