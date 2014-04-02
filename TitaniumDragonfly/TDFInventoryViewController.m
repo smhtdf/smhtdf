@@ -16,6 +16,7 @@
 @property (strong, nonatomic) PFGeoPoint *geoPoint;
 
 - (void)locationDidChange:(NSNotification *)note;
+- (void)inventoryDidChange:(NSNotification *)note;
 
 @end
 
@@ -35,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inventoryDidChange:) name:kTDFInventoryChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,11 +113,16 @@
     return query;
 }
 
-#pragma mark - Core Location handlers
+#pragma mark - Change Notification handlers
 
 - (void)locationDidChange:(NSNotification *)note
 {
     self.geoPoint = [PFGeoPoint geoPointWithLocation:note.userInfo[@"location"]];
+}
+
+- (void)inventoryDidChange:(NSNotification *)note
+{
+    [self loadObjects];
 }
 
 @end
