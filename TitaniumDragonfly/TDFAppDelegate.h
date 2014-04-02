@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString* const kTDFLocationChangeNotification = @"kTDFLocationChangeNotification";
+static NSString* const kTDFWorldChangeNotification = @"kTDFWorldChangeNotification";
 
 @interface TDFAppDelegate : UIResponder <UIApplicationDelegate>
 

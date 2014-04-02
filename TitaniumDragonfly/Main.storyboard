@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="YkX-Di-WdT" kind="push" id="uNz-2s-3gc"/>
+                                    <segue destination="YkX-Di-WdT" kind="push" identifier="ShowDropItemViewSegue" id="uNz-2s-3gc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="1155" y="1260"/>
         </scene>
-        <!--View Controller-->
+        <!--Drop Item View Controller-->
         <scene sceneID="dIH-Xh-0KA">
             <objects>
-                <viewController id="YkX-Di-WdT" sceneMemberID="viewController">
+                <viewController id="YkX-Di-WdT" customClass="TDFDropItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eg4-j1-w0b"/>
                         <viewControllerLayoutGuide type="bottom" id="D4p-UX-Uyi"/>
@@ -205,9 +205,36 @@
                     <view key="view" contentMode="scaleToFill" id="8Mi-wu-g7u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drop inventory item:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-CQ-0Sv">
+                                <rect key="frame" x="20" y="87" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqU-Vj-3w5">
+                                <rect key="frame" x="20" y="129" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcy-Y1-F8r">
+                                <rect key="frame" x="135" y="192" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Drop it!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inventoryItemDropItButtonTouched:" destination="YkX-Di-WdT" eventType="touchUpInside" id="80T-Su-02j"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Dq-qd-7ML"/>
+                    <connections>
+                        <outlet property="inventoryItemNameLabel" destination="fqU-Vj-3w5" id="TMw-l9-KbZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg4-K0-Ehb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

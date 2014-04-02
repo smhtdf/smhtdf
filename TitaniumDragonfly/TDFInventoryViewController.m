@@ -8,8 +8,14 @@
 
 #import "TDFInventoryViewController.h"
 #import "TDFCreateItemViewController.h"
+#import "TDFDropItemViewController.h"
+#import "TDFAppDelegate.h"
 
 @interface TDFInventoryViewController ()
+
+@property (strong, nonatomic) PFGeoPoint *geoPoint;
+
+- (void)locationDidChange:(NSNotification *)note;
 
 @end
 
@@ -28,6 +34,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +46,7 @@
 #pragma mark - Table View Data Source
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    static NSString *identifier = @"InventoryItemCell";
+    static NSString *identifier = @"TDFInventoryTableViewCell";
     PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
@@ -75,6 +82,17 @@
             [self loadObjects];
         }];
     }
+    else if ([segue.identifier isEqualToString:@"ShowDropItemViewSegue"]) {
+        TDFDropItemViewController *dropItemViewController = segue.destinationViewController;
+        dropItemViewController.geoPoint = self.geoPoint;
+        
+        PFTableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        dropItemViewController.itemObject = [self objectAtIndexPath:indexPath];
+        [dropItemViewController setDropItemCompletionBlock:^{
+            [self loadObjects];
+        }];
+    }
 }
 
 #pragma mark - Parse API
@@ -91,6 +109,13 @@
     [query orderByDescending:@"createdAt"];
     
     return query;
+}
+
+#pragma mark - Core Location handlers
+
+- (void)locationDidChange:(NSNotification *)note
+{
+    self.geoPoint = [PFGeoPoint geoPointWithLocation:note.userInfo[@"location"]];
 }
 
 @end
