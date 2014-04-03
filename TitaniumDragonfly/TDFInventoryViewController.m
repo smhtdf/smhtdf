@@ -13,9 +13,6 @@
 
 @interface TDFInventoryViewController ()
 
-@property (strong, nonatomic) PFGeoPoint *geoPoint;
-
-- (void)locationDidChange:(NSNotification *)note;
 - (void)inventoryDidChange:(NSNotification *)note;
 
 @end
@@ -35,7 +32,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inventoryDidChange:) name:kTDFInventoryChangeNotification object:nil];
 }
 
@@ -76,8 +72,8 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     if ([identifier isEqualToString:@"ShowDropItemViewSegue"]) {
-        if (!self.geoPoint) {
-#warning TODO: get current location immediately
+        TDFAppDelegate *appD = [UIApplication sharedApplication].delegate;
+        if (!appD.locationManager.location) {
             return NO;
         }
     }
@@ -98,7 +94,8 @@
     }
     else if ([segue.identifier isEqualToString:@"ShowDropItemViewSegue"]) {
         TDFDropItemViewController *dropItemViewController = segue.destinationViewController;
-        dropItemViewController.geoPoint = self.geoPoint;
+        TDFAppDelegate *appD = [UIApplication sharedApplication].delegate;
+        dropItemViewController.geoPoint = [PFGeoPoint geoPointWithLocation:appD.locationManager.location];
         
         PFTableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
@@ -126,11 +123,6 @@
 }
 
 #pragma mark - Change Notification handlers
-
-- (void)locationDidChange:(NSNotification *)note
-{
-    self.geoPoint = [PFGeoPoint geoPointWithLocation:note.userInfo[@"location"]];
-}
 
 - (void)inventoryDidChange:(NSNotification *)note
 {

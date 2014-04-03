@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 static NSString* const kTDFLocationChangeNotification = @"kTDFLocationChangeNotification";
 static NSString* const kTDFWorldChangeNotification = @"kTDFWorldChangeNotification";
@@ -22,5 +23,7 @@ static NSString* const kTDFInventoryChangeNotification = @"kTDFInventoryChangeNo
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end

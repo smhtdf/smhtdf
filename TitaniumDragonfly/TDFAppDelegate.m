@@ -9,9 +9,8 @@
 #import "TDFAppDelegate.h"
 #import <Parse/Parse.h>
 
-@interface TDFAppDelegate () <CLLocationManagerDelegate>
+@interface TDFAppDelegate () <CLLocationManagerDelegate, UITabBarControllerDelegate>
 
-@property (strong, nonatomic) CLLocationManager *locationManager;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 
 @end
@@ -32,6 +31,10 @@
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
     [self.locationManager startMonitoringSignificantLocationChanges];
+    
+    // Make the AppDelegate control which tabs are selectable
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    tabBarController.delegate = self;
     
     return YES;
 }
@@ -164,6 +167,20 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:kTDFLocationChangeNotification object:nil userInfo:[NSDictionary dictionaryWithObject:[locations lastObject] forKey:@"location"]];
+}
+
+#pragma mark - Tab Bar Controller handlers
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"%@", viewController.tabBarItem.title);
+    if ([viewController.tabBarItem.title isEqualToString:@"Collect"]) {
+        NSLog(@"%@", self.locationManager.location);
+        if (!self.locationManager.location) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 @end
