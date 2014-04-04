@@ -40,6 +40,7 @@
 		A4BBF8F918EC1F9A00247E4C /* TDFDropItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F818EC1F9A00247E4C /* TDFDropItemViewController.m */; };
 		A4BBF8FC18EC29BF00247E4C /* TDFCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8FB18EC29BF00247E4C /* TDFCollectViewController.m */; };
 		A4BFECBE18EC63480055F871 /* TDFCollectItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BFECBD18EC63480055F871 /* TDFCollectItemViewController.m */; };
+		A4BFECC218EF037A0055F871 /* TDFLookViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BFECC118EF037A0055F871 /* TDFLookViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A4BBF8FB18EC29BF00247E4C /* TDFCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectViewController.m; sourceTree = "<group>"; };
 		A4BFECBC18EC63480055F871 /* TDFCollectItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFCollectItemViewController.h; sourceTree = "<group>"; };
 		A4BFECBD18EC63480055F871 /* TDFCollectItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectItemViewController.m; sourceTree = "<group>"; };
+		A4BFECC118EF037A0055F871 /* TDFLookViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLookViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A418EFF118EB576400F8CD4F /* TitaniumDragonflyTests.m */,
+				A4BFECC118EF037A0055F871 /* TDFLookViewControllerTests.m */,
 				A418EFEC18EB576400F8CD4F /* Supporting Files */,
 			);
 			path = TitaniumDragonflyTests;
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BFECC218EF037A0055F871 /* TDFLookViewControllerTests.m in Sources */,
 				A418EFF218EB576400F8CD4F /* TitaniumDragonflyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
