@@ -35,6 +35,7 @@
 		A41AC07518EB6371008B52B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AC07418EB6371008B52B2 /* Main.storyboard */; };
 		A4A4E0B318F14D510040F60D /* TDFInventoryViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B218F14D510040F60D /* TDFInventoryViewControllerTests.m */; };
 		A4A4E0B418F14F7F0040F60D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06018EB623B008B52B2 /* Parse.framework */; };
+		A4A4E0B618F150B00040F60D /* TDFCreateItemViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B518F150B00040F60D /* TDFCreateItemViewControllerTests.m */; };
 		A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */; };
 		A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */; };
 		A4BBF8F318EC122500247E4C /* TDFInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F218EC122500247E4C /* TDFInventoryViewController.m */; };
@@ -86,6 +87,7 @@
 		A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A41AC07418EB6371008B52B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A4A4E0B218F14D510040F60D /* TDFInventoryViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFInventoryViewControllerTests.m; sourceTree = "<group>"; };
+		A4A4E0B518F150B00040F60D /* TDFCreateItemViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCreateItemViewControllerTests.m; sourceTree = "<group>"; };
 		A4BBF8EC18EBDED500247E4C /* TDFLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLookViewController.h; sourceTree = "<group>"; };
 		A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLookViewController.m; sourceTree = "<group>"; };
 		A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -224,6 +226,7 @@
 				A418EFF118EB576400F8CD4F /* TitaniumDragonflyTests.m */,
 				A4BFECC118EF037A0055F871 /* TDFLookViewControllerTests.m */,
 				A4A4E0B218F14D510040F60D /* TDFInventoryViewControllerTests.m */,
+				A4A4E0B518F150B00040F60D /* TDFCreateItemViewControllerTests.m */,
 				A418EFEC18EB576400F8CD4F /* Supporting Files */,
 			);
 			path = TitaniumDragonflyTests;
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A4E0B618F150B00040F60D /* TDFCreateItemViewControllerTests.m in Sources */,
 				A4BFECC218EF037A0055F871 /* TDFLookViewControllerTests.m in Sources */,
 				A418EFF218EB576400F8CD4F /* TitaniumDragonflyTests.m in Sources */,
 				A4A4E0B318F14D510040F60D /* TDFInventoryViewControllerTests.m in Sources */,
