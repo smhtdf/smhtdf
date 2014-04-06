@@ -35,7 +35,7 @@
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];
-    XCTAssertNotNil(_vc.view, @"The view should have loaded");
+    XCTAssertNotNil(_vc.view, @"The view should have loaded!");
 }
 
 - (void)test_loadView_inventoryItemNameTextField_isNotNil
@@ -54,7 +54,7 @@
 {
     [_vc loadView];
     XCTAssertEqualObjects([_vc.createItButton actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside],
-                   @[@"inventoryItemCreateItButtonTouched:"], @"Button should be connecte.");
+                   @[@"inventoryItemCreateItButtonTouched:"], @"Button should be connected.");
 }
 
 @end

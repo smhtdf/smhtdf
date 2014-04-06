@@ -22,7 +22,8 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _vc = [TDFCollectViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _vc = [storyboard instantiateViewControllerWithIdentifier:@"TDFCollectViewController"];
 }
 
 - (void)tearDown

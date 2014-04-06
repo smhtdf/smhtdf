@@ -22,7 +22,8 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _vc = [TDFLookViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _vc = [storyboard instantiateViewControllerWithIdentifier:@"TDFLookViewController"];
 }
 
 - (void)tearDown
@@ -35,6 +36,12 @@
 {
     [_vc loadView];
     XCTAssertNotNil(_vc.view, @"The view should have loaded!");
+}
+
+- (void)test_loadView_lookMap_isNotNil
+{
+    [_vc loadView];
+    XCTAssertNotNil(_vc.lookMap, @"Map should not be nil.");
 }
 
 @end

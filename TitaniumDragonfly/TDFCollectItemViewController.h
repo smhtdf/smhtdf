@@ -12,6 +12,7 @@
 @interface TDFCollectItemViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *itemObject;
+@property (strong, nonatomic) IBOutlet UIButton *collectItButton;
 @property (strong, nonatomic) IBOutlet UILabel *inventoryItemNameLabel;
 - (IBAction)inventoryItemCollectItButtonTouched:(id)sender;
 

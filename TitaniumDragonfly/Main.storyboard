@@ -48,7 +48,7 @@
         <!--Look View Controller-->
         <scene sceneID="I5S-ck-Q57">
             <objects>
-                <viewController id="0Mi-be-wEy" customClass="TDFLookViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TDFLookViewController" id="0Mi-be-wEy" customClass="TDFLookViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vSA-pZ-vEw"/>
                         <viewControllerLayoutGuide type="bottom" id="tya-w3-0vw"/>
@@ -166,7 +166,7 @@
         <!--Collect View Controller-->
         <scene sceneID="S4H-UR-l6H">
             <objects>
-                <tableViewController id="AD3-2G-lNW" customClass="TDFCollectViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TDFCollectViewController" id="AD3-2G-lNW" customClass="TDFCollectViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="reh-hV-gC8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +201,7 @@
         <!--Drop Item View Controller-->
         <scene sceneID="dIH-Xh-0KA">
             <objects>
-                <viewController id="YkX-Di-WdT" customClass="TDFDropItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TDFDropItemViewController" id="YkX-Di-WdT" customClass="TDFDropItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eg4-j1-w0b"/>
                         <viewControllerLayoutGuide type="bottom" id="D4p-UX-Uyi"/>
@@ -237,6 +237,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Dq-qd-7ML"/>
                     <connections>
+                        <outlet property="dropItButton" destination="mcy-Y1-F8r" id="ILL-SU-HlM"/>
                         <outlet property="inventoryItemNameLabel" destination="fqU-Vj-3w5" id="TMw-l9-KbZ"/>
                     </connections>
                 </viewController>
@@ -247,7 +248,7 @@
         <!--Collect Item View Controller-->
         <scene sceneID="cyk-5X-Pvn">
             <objects>
-                <viewController id="1bC-0w-tDL" customClass="TDFCollectItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TDFCollectItemViewController" id="1bC-0w-tDL" customClass="TDFCollectItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JxM-G1-K4p"/>
                         <viewControllerLayoutGuide type="bottom" id="U1L-cu-mKm"/>
@@ -284,6 +285,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jrE-Ds-43o"/>
                     <connections>
+                        <outlet property="collectItButton" destination="YVv-yu-xLM" id="HBg-qX-AmR"/>
                         <outlet property="inventoryItemNameLabel" destination="n1D-Dz-1Ma" id="gRh-9V-xhw"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@
 @property (strong, nonatomic) PFGeoPoint *geoPoint;
 @property (strong, nonatomic) PFObject *itemObject;
 
+@property (strong, nonatomic) IBOutlet UIButton *dropItButton;
 @property (strong, nonatomic) IBOutlet UILabel *inventoryItemNameLabel;
 - (IBAction)inventoryItemDropItButtonTouched:(id)sender;
 

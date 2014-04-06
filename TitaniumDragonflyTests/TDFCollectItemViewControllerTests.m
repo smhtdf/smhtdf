@@ -22,7 +22,8 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _vc = [TDFCollectItemViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _vc = [storyboard instantiateViewControllerWithIdentifier:@"TDFCollectItemViewController"];
 }
 
 - (void)tearDown
@@ -35,6 +36,25 @@
 {
     [_vc loadView];
     XCTAssertNotNil(_vc.view, @"The view should have loaded!");
+}
+
+- (void)test_loadView_inventoryItemNameLabel_isNotNil
+{
+    [_vc loadView];
+    XCTAssertNotNil(_vc.inventoryItemNameLabel, @"Label should not be nil");
+}
+
+- (void)test_loadView_collectItButton_isNotNil
+{
+    [_vc loadView];
+    XCTAssertNotNil(_vc.collectItButton, @"Button should not be nil");
+}
+
+- (void)test_loadView_collectItButtonAction_inventoryItemCollectItbuttonTouched
+{
+    [_vc loadView];
+    XCTAssertEqualObjects([_vc.collectItButton actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside],
+                          @[@"inventoryItemCollectItButtonTouched:"], @"Button should be connected.");
 }
 
 @end
