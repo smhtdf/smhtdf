@@ -35,7 +35,7 @@
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];
-    XCTAssertNotNil(_vc.view, @"view should have loaded");
+    XCTAssertNotNil(_vc.view, @"The view should have loaded");
 }
 
 - (void)test_loadView_inventoryItemNameTextField_isNotNil
