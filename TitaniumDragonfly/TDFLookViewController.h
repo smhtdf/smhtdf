@@ -12,5 +12,6 @@
 @interface TDFLookViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet MKMapView *lookMap;
+- (void)locationDidChange:(NSNotification *)note;
 
 @end
