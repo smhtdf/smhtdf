@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 
 @interface TDFLookViewControllerTests : XCTestCase {
-    TDFLookViewController *_lookViewController;
+    TDFLookViewController *_vc;
 }
 
 @end
@@ -22,7 +22,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _lookViewController = [TDFLookViewController new];
+    _vc = [TDFLookViewController new];
 }
 
 - (void)tearDown
@@ -33,8 +33,8 @@
 
 - (void)test_loadView_view_isNotNil
 {
-    [_lookViewController loadView];
-    XCTAssertNotNil(_lookViewController.view, @"The view should have loaded!");
+    [_vc loadView];
+    XCTAssertNotNil(_vc.view, @"The view should have loaded!");
 }
 
 - (void)test_didReceiveMemoryWarning_IBOutletsAndIBActions_isNil {
@@ -42,9 +42,9 @@
     [self test_loadView_view_isNotNil];
 
     // Unload
-    [_lookViewController didReceiveMemoryWarning];
-    XCTAssertNil(_lookViewController.lookMap, @"The map should have unloaded");
-    //NB: Accessing _lookViewController.view would cause a premature reload.
+    [_vc didReceiveMemoryWarning];
+    XCTAssertNil(_vc.lookMap, @"The map should have unloaded");
+    //NB: Accessing the view property would cause a premature reload.
     
     // Reload
     [self test_loadView_view_isNotNil];

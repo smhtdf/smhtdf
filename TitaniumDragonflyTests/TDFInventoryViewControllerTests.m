@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 
 @interface TDFInventoryViewControllerTests : XCTestCase {
-    TDFInventoryViewController *_inventoryViewController;
+    TDFInventoryViewController *_vc;
 }
 
 @end
@@ -22,7 +22,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _inventoryViewController = [TDFInventoryViewController new];
+    _vc = [TDFInventoryViewController new];
 }
 
 - (void)tearDown
@@ -33,8 +33,21 @@
 
 - (void)test_loadView_view_isNotNil
 {
-    [_inventoryViewController loadView];
-    XCTAssertNotNil(_inventoryViewController.view, @"The view should have loaded!");
+    [_vc loadView];
+    XCTAssertNotNil(_vc.view, @"The view should have loaded!");
+}
+
+- (void)test_didReceiveMemoryWarning_IBOutletsAndIBActions_isNil {
+    // Load
+    [self test_loadView_view_isNotNil];
+    
+    // Unload
+    [_vc didReceiveMemoryWarning];
+    //NB: No IBOutlets or IBActions to check.
+    //NB: Accessing the view property would cause a premature reload.
+    
+    // Reload
+    [self test_loadView_view_isNotNil];
 }
 
 @end
