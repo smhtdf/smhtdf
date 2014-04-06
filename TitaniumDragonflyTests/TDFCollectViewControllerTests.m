@@ -32,6 +32,11 @@
     [super tearDown];
 }
 
+- (void)test_setUp_vc_isOfClassTDFInventoryViewController
+{
+    XCTAssertEqualObjects([_vc class], [TDFCollectViewController class], @"Should be a TDFCollectViewController!");
+}
+
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];

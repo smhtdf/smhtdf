@@ -32,6 +32,11 @@
     [super tearDown];
 }
 
+- (void)test_setUp_vc_isOfClassTDFLookViewController
+{
+    XCTAssertEqual([_vc class], [TDFLookViewController class], @"Should be of class TDFLookViewController");
+}
+
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];

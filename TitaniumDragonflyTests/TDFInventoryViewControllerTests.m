@@ -22,13 +22,19 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _vc = [TDFInventoryViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _vc = [storyboard instantiateViewControllerWithIdentifier:@"TDFInventoryViewController"];
 }
 
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (void)test_setUp_vc_isOfClassTDFInventoryViewController
+{
+    XCTAssertEqualObjects([_vc class], [TDFInventoryViewController class], @"Should be a TDFInventoryViewController!");
 }
 
 - (void)test_loadView_view_isNotNil

@@ -32,6 +32,11 @@
     [super tearDown];
 }
 
+- (void)test_setUp_vc_isOfClassTDFCreateItemViewController
+{
+    XCTAssertEqualObjects([_vc class], [TDFCreateItemViewController class], @"Should be a TDFCreateItemViewController!");
+}
+
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];

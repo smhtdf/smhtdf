@@ -32,6 +32,11 @@
     [super tearDown];
 }
 
+- (void)test_setUp_vc_isOfClassTDFDropItemViewController
+{
+    XCTAssertEqualObjects([_vc class], [TDFDropItemViewController class], @"Should be a TDFDropItemViewController!");
+}
+
 - (void)test_loadView_view_isNotNil
 {
     [_vc loadView];
