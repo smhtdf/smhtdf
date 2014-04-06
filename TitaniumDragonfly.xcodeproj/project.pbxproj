@@ -33,6 +33,18 @@
 		A41AC07118EB62C7008B52B2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07018EB62C7008B52B2 /* StoreKit.framework */; };
 		A41AC07318EB62D5008B52B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */; };
 		A41AC07518EB6371008B52B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AC07418EB6371008B52B2 /* Main.storyboard */; };
+		A44259DC18F1B3BA001DE387 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06218EB6266008B52B2 /* AudioToolbox.framework */; };
+		A44259DD18F1B3C3001DE387 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06418EB6272008B52B2 /* CFNetwork.framework */; };
+		A44259DE18F1B3CC001DE387 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A418EFC818EB576400F8CD4F /* CoreGraphics.framework */; };
+		A44259DF18F1B3D5001DE387 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06618EB6285008B52B2 /* CoreLocation.framework */; };
+		A44259E018F1B3DF001DE387 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06818EB6296008B52B2 /* libz.dylib */; };
+		A44259E118F1B3E9001DE387 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06A18EB62A3008B52B2 /* MobileCoreServices.framework */; };
+		A44259E218F1B3F3001DE387 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06C18EB62AE008B52B2 /* QuartzCore.framework */; };
+		A44259E318F1B400001DE387 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06E18EB62BA008B52B2 /* Security.framework */; };
+		A44259E418F1B40C001DE387 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07018EB62C7008B52B2 /* StoreKit.framework */; };
+		A44259E518F1B416001DE387 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */; };
+		A44259E618F1B54E001DE387 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A44259DA18F1ADD7001DE387 /* libOCMock.a */; };
+		A44259E818F1B816001DE387 /* usr in Resources */ = {isa = PBXBuildFile; fileRef = A44259E718F1B816001DE387 /* usr */; };
 		A4A4E0B318F14D510040F60D /* TDFInventoryViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B218F14D510040F60D /* TDFInventoryViewControllerTests.m */; };
 		A4A4E0B418F14F7F0040F60D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41AC06018EB623B008B52B2 /* Parse.framework */; };
 		A4A4E0B618F150B00040F60D /* TDFCreateItemViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B518F150B00040F60D /* TDFCreateItemViewControllerTests.m */; };
@@ -89,6 +101,8 @@
 		A41AC07018EB62C7008B52B2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A41AC07418EB6371008B52B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A44259DA18F1ADD7001DE387 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
+		A44259E718F1B816001DE387 /* usr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usr; sourceTree = "<group>"; };
 		A4A4E0B218F14D510040F60D /* TDFInventoryViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFInventoryViewControllerTests.m; sourceTree = "<group>"; };
 		A4A4E0B518F150B00040F60D /* TDFCreateItemViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCreateItemViewControllerTests.m; sourceTree = "<group>"; };
 		A4A4E0B718F151960040F60D /* TDFDropItemViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFDropItemViewControllerTests.m; sourceTree = "<group>"; };
@@ -137,6 +151,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44259E618F1B54E001DE387 /* libOCMock.a in Frameworks */,
+				A44259E518F1B416001DE387 /* SystemConfiguration.framework in Frameworks */,
+				A44259E418F1B40C001DE387 /* StoreKit.framework in Frameworks */,
+				A44259E318F1B400001DE387 /* Security.framework in Frameworks */,
+				A44259E218F1B3F3001DE387 /* QuartzCore.framework in Frameworks */,
+				A44259E118F1B3E9001DE387 /* MobileCoreServices.framework in Frameworks */,
+				A44259E018F1B3DF001DE387 /* libz.dylib in Frameworks */,
+				A44259DF18F1B3D5001DE387 /* CoreLocation.framework in Frameworks */,
+				A44259DE18F1B3CC001DE387 /* CoreGraphics.framework in Frameworks */,
+				A44259DD18F1B3C3001DE387 /* CFNetwork.framework in Frameworks */,
+				A44259DC18F1B3BA001DE387 /* AudioToolbox.framework in Frameworks */,
 				A4A4E0B418F14F7F0040F60D /* Parse.framework in Frameworks */,
 				A418EFE518EB576400F8CD4F /* XCTest.framework in Frameworks */,
 				A418EFE818EB576400F8CD4F /* CoreData.framework in Frameworks */,
@@ -151,6 +176,7 @@
 		A418EFBA18EB576400F8CD4F = {
 			isa = PBXGroup;
 			children = (
+				A44259E718F1B816001DE387 /* usr */,
 				A418EFCE18EB576400F8CD4F /* TitaniumDragonfly */,
 				A418EFEB18EB576400F8CD4F /* TitaniumDragonflyTests */,
 				A418EFC518EB576400F8CD4F /* Frameworks */,
@@ -170,6 +196,7 @@
 		A418EFC518EB576400F8CD4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A44259DA18F1ADD7001DE387 /* libOCMock.a */,
 				A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */,
 				A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */,
 				A41AC07018EB62C7008B52B2 /* StoreKit.framework */,
@@ -336,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A418EFF018EB576400F8CD4F /* InfoPlist.strings in Resources */,
+				A44259E818F1B816001DE387 /* usr in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +552,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "TitaniumDragonflyTests/TitaniumDragonflyTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"$(SRCROOT)/usr/lib/libOCMock.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -543,7 +587,23 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TitaniumDragonfly/TitaniumDragonfly-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "TitaniumDragonflyTests/TitaniumDragonflyTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"$(SRCROOT)/usr/lib/libOCMock.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
