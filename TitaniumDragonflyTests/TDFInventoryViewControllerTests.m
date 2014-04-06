@@ -37,17 +37,4 @@
     XCTAssertNotNil(_vc.view, @"The view should have loaded!");
 }
 
-- (void)test_didReceiveMemoryWarning_IBOutletsAndIBActions_isNil {
-    // Load
-    [self test_loadView_view_isNotNil];
-    
-    // Unload
-    [_vc didReceiveMemoryWarning];
-    //NB: No IBOutlets or IBActions to check.
-    //NB: Accessing the view property would cause a premature reload.
-    
-    // Reload
-    [self test_loadView_view_isNotNil];
-}
-
 @end
