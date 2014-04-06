@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 
 @interface TDFCollectItemViewControllerTests : XCTestCase {
-    TDFCollectItemViewController *_collectItemViewController;
+    TDFCollectItemViewController *_vc;
 }
 
 @end
@@ -22,7 +22,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _collectItemViewController = [TDFCollectItemViewController new];
+    _vc = [TDFCollectItemViewController new];
 }
 
 - (void)tearDown
@@ -33,8 +33,8 @@
 
 - (void)test_loadView_view_isNotNil
 {
-    [_collectItemViewController loadView];
-    XCTAssertNotNil(_collectItemViewController.view, @"The view should have loaded!");
+    [_vc loadView];
+    XCTAssertNotNil(_vc.view, @"The view should have loaded!");
 }
 
 @end
