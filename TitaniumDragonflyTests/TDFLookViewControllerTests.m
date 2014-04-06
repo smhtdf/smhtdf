@@ -31,10 +31,23 @@
     [super tearDown];
 }
 
-- (void)test_loadView_view_isNotNull
+- (void)test_loadView_view_isNotNil
 {
     [_lookViewController loadView];
     XCTAssertNotNil(_lookViewController.view, @"The view should have loaded!");
+}
+
+- (void)test_didReceiveMemoryWarning_IBOutletsAndIBActions_isNil {
+    // Load
+    [self test_loadView_view_isNotNil];
+
+    // Unload
+    [_lookViewController didReceiveMemoryWarning];
+    XCTAssertNil(_lookViewController.lookMap, @"The map should have unloaded");
+    //NB: Accessing _lookViewController.view would cause a premature reload.
+    
+    // Reload
+    [self test_loadView_view_isNotNil];
 }
 
 @end

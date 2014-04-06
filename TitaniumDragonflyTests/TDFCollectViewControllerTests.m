@@ -31,7 +31,7 @@
     [super tearDown];
 }
 
-- (void)test_loadView_view_isNotNull
+- (void)test_loadView_view_isNotNil
 {
     [_collectViewController loadView];
     XCTAssertNotNil(_collectViewController.view, @"The view should have loaded!");
