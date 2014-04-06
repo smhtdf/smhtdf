@@ -53,6 +53,7 @@
 - (void)test_locationDidChange_lookMap_setRegion
 {
     // Line to test GitHub integration with FogBugz
+    // using See bugzid:315
     // Create the mock map
     id lookMapMock = [OCMockObject mockForClass:[MKMapView class]];
     
