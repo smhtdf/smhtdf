@@ -76,7 +76,7 @@
         <!--Create Item View Controller-->
         <scene sceneID="Qct-fL-ChP">
             <objects>
-                <viewController id="aOZ-eC-Tt4" customClass="TDFCreateItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TDFCreateItemViewController" id="aOZ-eC-Tt4" customClass="TDFCreateItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZc-oz-O2X"/>
                         <viewControllerLayoutGuide type="bottom" id="t4E-8J-p7J"/>
@@ -116,6 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lbg-n3-pmf"/>
                     <connections>
+                        <outlet property="createItButton" destination="Mce-KS-aQd" id="oif-jx-cWO"/>
                         <outlet property="inventoryItemNameTextField" destination="pCO-Iy-fuu" id="nDr-7Z-k3y"/>
                     </connections>
                 </viewController>

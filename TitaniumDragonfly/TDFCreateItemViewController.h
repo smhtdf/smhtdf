@@ -10,6 +10,7 @@
 
 @interface TDFCreateItemViewController : UIViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UIButton *createItButton;
 @property (strong, nonatomic) IBOutlet UITextField *inventoryItemNameTextField;
 - (IBAction)inventoryItemCreateItButtonTouched:(id)sender;
 
