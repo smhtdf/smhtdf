@@ -52,7 +52,7 @@
 
 - (void)test_locationDidChange_lookMap_setRegion
 {
-    // TEST GITHUB
+    // TEST GITHUB -- BugzID 30
     // Create the mock map
     id lookMapMock = [OCMockObject mockForClass:[MKMapView class]];
     
