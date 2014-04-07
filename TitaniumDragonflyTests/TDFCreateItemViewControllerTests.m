@@ -55,7 +55,7 @@
     XCTAssertNotNil(_vc.createItButton, @"Button should not be nil");
 }
 
-- (void)test_loadView_createItButtonAction_inventoryItemCreateItbuttonTouched
+- (void)test_loadView_createItButtonAction_inventoryItemCreateItButtonTouched
 {
     [_vc loadView];
     XCTAssertEqualObjects([_vc.createItButton actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside],

@@ -89,5 +89,11 @@
     [lookMapMock verify];
 }
 
+- (void)test_loadView_lookMapDelegate_isVC
+{
+    [_vc loadView];
+    XCTAssertEqualObjects(_vc.lookMap.delegate, _vc, @"Map views delegate should be this view controller.");
+}
+
 @end
 
