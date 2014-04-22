@@ -71,6 +71,9 @@
 
     // Register expected invokations
     [[lookMapMock expect] setRegion:region animated:animated];
+    [[lookMapMock expect] userLocation];
+    [[lookMapMock expect] annotations];
+    [[lookMapMock expect] removeAnnotations:nil];
     _vc.lookMap = lookMapMock;
 
     // Dummy inputs

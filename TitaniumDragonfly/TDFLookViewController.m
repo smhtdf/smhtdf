@@ -8,6 +8,8 @@
 
 #import "TDFLookViewController.h"
 #import "TDFAppDelegate.h"
+#import "TDFMapAnnotation.h"
+#import <Parse/Parse.h>
 
 @interface TDFLookViewController ()
 
@@ -63,6 +65,30 @@
     
     // move the map to our location
     [self.lookMap setRegion:region animated:YES];
+    
+    // move
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:note.userInfo[@"location"]];
+    PFQuery *query = [PFQuery queryWithClassName:@"GameItem"];
+    [query whereKey:@"location" nearGeoPoint:geoPoint withinKilometers:5.0];
+    
+    NSArray *objArray = [query findObjects];
+    {
+        id userLocation = [self.lookMap userLocation];
+        NSMutableArray *pins = [[NSMutableArray alloc] initWithArray:[self.lookMap annotations]];
+        NSLog(@"ANNOTATIONS!!!: %@", pins);
+        if ( userLocation != nil ) {
+            [pins removeObject:userLocation]; // avoid removing user location off the map
+        }
+        
+        [self.lookMap removeAnnotations:pins];
+    }
+    
+    for (NSDictionary *object in objArray) {
+        PFGeoPoint *geoPoint = object[@"location"];
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude);
+        TDFMapAnnotation *annotation = [[TDFMapAnnotation alloc] initWithLocation:location];
+        [self.lookMap addAnnotation:annotation];
+    }
 }
 
 @end
