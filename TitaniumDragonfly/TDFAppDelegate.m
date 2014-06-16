@@ -47,6 +47,11 @@
         NSLog(@"Name: %@", [info valueForKey:@"name"]);
     }
     
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    if (![defaults valueForKey:@"name_preference"]) {
+//        [defaults setObject:@"my name" forKey:@"name_preference"];
+//    }
+    
     return YES;
 }
 

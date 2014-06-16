@@ -129,4 +129,19 @@
     [self loadObjects];
 }
 
+- (IBAction)longPressGestureHandler:(id)sender {
+    CGPoint location = [sender locationInView:self.tableView];
+    NSLog(@"LONG PRESS");
+    NSLog(@"%f, %f", location.x, location.y);
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    
+    if (indexPath == nil) {
+        NSLog(@"long press on table view but not on a row");
+    }
+    else {
+        NSLog(@"long press on table view at row %d", indexPath.row);
+    }
+}
+
 @end

@@ -51,6 +51,9 @@
 		A4A4E0B818F151960040F60D /* TDFDropItemViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B718F151960040F60D /* TDFDropItemViewControllerTests.m */; };
 		A4A4E0BA18F1528D0040F60D /* TDFCollectViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0B918F1528D0040F60D /* TDFCollectViewControllerTests.m */; };
 		A4A4E0BC18F153430040F60D /* TDFCollectItemViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0BB18F153430040F60D /* TDFCollectItemViewControllerTests.m */; };
+		A4ACD580194832B400554D57 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4ACD57F194832B400554D57 /* Settings.bundle */; };
+		A4ACD58219483EE500554D57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ACD58119483EE500554D57 /* Social.framework */; };
+		A4ACD58419484F9D00554D57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ACD58319484F9D00554D57 /* MessageUI.framework */; };
 		A4BBF8EE18EBDED500247E4C /* TDFLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */; };
 		A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */; };
 		A4BBF8F318EC122500247E4C /* TDFInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BBF8F218EC122500247E4C /* TDFInventoryViewController.m */; };
@@ -112,6 +115,9 @@
 		A4A4E0B718F151960040F60D /* TDFDropItemViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFDropItemViewControllerTests.m; sourceTree = "<group>"; };
 		A4A4E0B918F1528D0040F60D /* TDFCollectViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectViewControllerTests.m; sourceTree = "<group>"; };
 		A4A4E0BB18F153430040F60D /* TDFCollectItemViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFCollectItemViewControllerTests.m; sourceTree = "<group>"; };
+		A4ACD57F194832B400554D57 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A4ACD58119483EE500554D57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A4ACD58319484F9D00554D57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A4BBF8EC18EBDED500247E4C /* TDFLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDFLookViewController.h; sourceTree = "<group>"; };
 		A4BBF8ED18EBDED500247E4C /* TDFLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDFLookViewController.m; sourceTree = "<group>"; };
 		A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4ACD58419484F9D00554D57 /* MessageUI.framework in Frameworks */,
+				A4ACD58219483EE500554D57 /* Social.framework in Frameworks */,
 				A4BBF8F018EBDF2C00247E4C /* MapKit.framework in Frameworks */,
 				A41AC07318EB62D5008B52B2 /* SystemConfiguration.framework in Frameworks */,
 				A41AC07118EB62C7008B52B2 /* StoreKit.framework in Frameworks */,
@@ -187,6 +195,7 @@
 		A418EFBA18EB576400F8CD4F = {
 			isa = PBXGroup;
 			children = (
+				A4ACD57F194832B400554D57 /* Settings.bundle */,
 				A44259E718F1B816001DE387 /* usr */,
 				A418EFCE18EB576400F8CD4F /* TitaniumDragonfly */,
 				A418EFEB18EB576400F8CD4F /* TitaniumDragonflyTests */,
@@ -207,6 +216,8 @@
 		A418EFC518EB576400F8CD4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4ACD58319484F9D00554D57 /* MessageUI.framework */,
+				A4ACD58119483EE500554D57 /* Social.framework */,
 				A44259DA18F1ADD7001DE387 /* libOCMock.a */,
 				A4BBF8EF18EBDF2C00247E4C /* MapKit.framework */,
 				A41AC07218EB62D5008B52B2 /* SystemConfiguration.framework */,
@@ -370,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4ACD580194832B400554D57 /* Settings.bundle in Resources */,
 				A41AC07518EB6371008B52B2 /* Main.storyboard in Resources */,
 				A418EFD318EB576400F8CD4F /* InfoPlist.strings in Resources */,
 				A418EFDE18EB576400F8CD4F /* Images.xcassets in Resources */,

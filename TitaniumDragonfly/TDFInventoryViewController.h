@@ -9,5 +9,6 @@
 #import <Parse/Parse.h>
 
 @interface TDFInventoryViewController : PFQueryTableViewController
+- (IBAction)longPressGestureHandler:(id)sender;
 
 @end

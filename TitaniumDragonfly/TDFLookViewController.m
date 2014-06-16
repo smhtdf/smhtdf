@@ -10,6 +10,7 @@
 #import "TDFAppDelegate.h"
 #import "TDFMapAnnotation.h"
 #import <Parse/Parse.h>
+#import <Social/Social.h>
 
 @interface TDFLookViewController ()
 
@@ -31,6 +32,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:kTDFLocationChangeNotification object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *name = [defaults valueForKey:@"name_preference"];
+    NSLog(@"Name -> %@", name);
+    
+    [self setTitle:name];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,4 +101,36 @@
     }
 }
 
+- (IBAction)postToSocialViaSL:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *postText = @"TEST: Hello World";
+        
+        [composeController setInitialText:postText];
+        
+        [self presentViewController:composeController animated:YES completion:nil];
+    }
+    else {
+        NSLog(@"Facebook not available");
+    }
+}
+
+- (IBAction)actionEmailComposer:(id)sender {
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"Titanium Dragonfly"];
+        [mailViewController setMessageBody:@"TEST: Hello world" isHTML:NO];
+        [self presentViewController:mailViewController animated:YES completion:nil];
+    }
+    else {
+        NSLog(@"Device is unable to send email in it's current state.");
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface TDFLookViewController : UIViewController
+@interface TDFLookViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *lookMap;
 - (void)locationDidChange:(NSNotification *)note;
+- (IBAction)postToSocialViaSL:(id)sender;
+- (IBAction)actionEmailComposer:(id)sender;
 
 @end
